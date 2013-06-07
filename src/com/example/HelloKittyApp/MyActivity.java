@@ -7,7 +7,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MyActivity extends Activity {
-
 	public TextView tvInfo;
 	public RelativeLayout relativeLayout;
 
@@ -28,7 +27,7 @@ public class MyActivity extends Activity {
 		tvInfo.setText(R.string.yellow);
 		relativeLayout.setBackgroundResource(R.color.yellowColor);
 	}
-	
+
 	public void buttonRed_Click(View v){
 		tvInfo.setText(R.string.red);
 		relativeLayout.setBackgroundResource(R.color.redColor);
