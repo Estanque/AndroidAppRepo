@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			  android:orientation="vertical"
-			  android:layout_width="fill_parent"
-			  android:layout_height="fill_parent"
-			  android:background="@color/myColor">
-	<ImageButton
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  	android:layout_width="match_parent"
+			  	android:layout_height="match_parent"
+				android:id="@+id/relativeLayout"
+				android:background="@color/redColor">
+	<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:text="@string/green"
+			android:id="@+id/buttonGreen"
+			android:onClick="buttonGreen_Click"
+			android:layout_marginTop="15dp"/>
+	<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/buttonGreen"
+			android:text="@string/yellow"
+			android:id="@+id/buttonYellow"
+			android:onClick="buttonYellow_Click"/>
+	<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/buttonYellow"
+			android:text="@string/red"
+			android:id="@+id/buttonRed"
+			android:onClick="buttonRed_Click"/>
+	<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:id="@+id/imageButton" android:layout_gravity="center" android:focusable="false"
-			android:src="@drawable/pinkhellokitty" android:layout_marginBottom="20dp" android:layout_marginTop="60dp"
-			android:onClick="onClick"/>
-	<TextView
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="@string/helloText"
-			android:id="@id/textView1" android:gravity="center" android:password="false" android:textStyle="bold"
-			android:textSize="40dp" android:textIsSelectable="false" android:textColor="@android:color/black"/>
-</LinearLayout>
+			android:text="@string/red"
+			android:id="@+id/textView"
+			android:layout_centerHorizontal="true" android:layout_below="@+id/buttonRed" android:layout_margin="15dp"
+			android:textSize="25dp"/>
+</RelativeLayout>
 
