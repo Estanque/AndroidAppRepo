@@ -1,23 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			  	android:layout_width="match_parent"
-			  	android:layout_height="match_parent"
-				android:id="@+id/relativeLayout">
-	<Button
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_alignParentLeft="true"
-			android:layout_alignParentTop="true"
-			android:text="Button #1"
-			android:id="@+id/buttonOne"
-			android:onClick="buttonClick"
-			android:layout_marginTop="15dp"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  	android:layout_width="fill_parent"
+			  	android:layout_height="fill_parent"
+				android:orientation="vertical"
+				android:id="@+id/linearLayout">
 	<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Hello"
-			android:id="@+id/textView"
-			android:layout_centerHorizontal="true" android:layout_below="@+id/buttonOne" android:layout_margin="15dp"
-			android:textSize="25dp"/>
-</RelativeLayout>
+			android:text="Кому:"
+			android:id="@+id/textView" android:layout_gravity="left|center_vertical" android:singleLine="false"/>
+	<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="мартышка"
+			android:id="@+id/edUserName"/>
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Описание:"
+			android:id="@+id/textView1" android:layout_gravity="left|center_vertical"/>
+	<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="пламенный привет"
+			android:id="@+id/edDescription"/>
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Отправитель:"
+			android:id="@+id/textView2" android:layout_gravity="left|center_vertical"/>
+	<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="собаченок"
+			android:id="@+id/edAuthor"/>
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Button #1"
+			android:id="@+id/buttonOne"
+			android:onClick="buttonClick"
+			android:layout_gravity="center" android:layout_marginTop="10dp"/>
+</LinearLayout>
 
