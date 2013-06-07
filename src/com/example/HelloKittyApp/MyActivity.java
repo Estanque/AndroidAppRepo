@@ -18,18 +18,21 @@ public class MyActivity extends Activity {
 		relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 	}
 
-	public void buttonGreen_Click(View v){
-		tvInfo.setText(R.string.green);
-		relativeLayout.setBackgroundResource(R.color.greenColor);
-	}
-	
-	public void buttonYellow_Click(View v){
-		tvInfo.setText(R.string.yellow);
-		relativeLayout.setBackgroundResource(R.color.yellowColor);
-	}
+	public void buttonClick(View v){
+		switch (v.getId()){
+			case R.id.buttonGreen:
+				tvInfo.setText(R.string.green);
+				relativeLayout.setBackgroundResource(R.color.greenColor);
+				break;
+			case R.id.buttonYellow:
+				tvInfo.setText(R.string.yellow);
+				relativeLayout.setBackgroundResource(R.color.yellowColor);
+				break;
+			case R.id.buttonRed:
+				tvInfo.setText(R.string.red);
+				relativeLayout.setBackgroundResource(R.color.redColor);
+				break;
+		}
 
-	public void buttonRed_Click(View v){
-		tvInfo.setText(R.string.red);
-		relativeLayout.setBackgroundResource(R.color.redColor);
 	}
 }

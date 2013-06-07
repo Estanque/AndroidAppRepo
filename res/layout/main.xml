@@ -11,7 +11,7 @@
 			android:layout_alignParentTop="true"
 			android:text="@string/green"
 			android:id="@+id/buttonGreen"
-			android:onClick="buttonGreen_Click"
+			android:onClick="buttonClick"
 			android:layout_marginTop="15dp"/>
 	<Button
 			android:layout_width="match_parent"
@@ -20,7 +20,7 @@
 			android:layout_below="@+id/buttonGreen"
 			android:text="@string/yellow"
 			android:id="@+id/buttonYellow"
-			android:onClick="buttonYellow_Click"/>
+			android:onClick="buttonClick"/>
 	<Button
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
 			android:layout_below="@+id/buttonYellow"
 			android:text="@string/red"
 			android:id="@+id/buttonRed"
-			android:onClick="buttonRed_Click"/>
+			android:onClick="buttonClick"/>
 	<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
