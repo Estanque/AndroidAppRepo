@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent"
+			android:orientation="vertical"
+			android:id="@+id/linearLayout2"
 			android:padding="10dip">
 	<TextView
-			android:id="@+id/textHello"
-			android:layout_width="fill_parent"
+			android:id="@+id/textView1"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="Hi" android:textSize="18dp"/>
-</ScrollView>
+			android:text="Выберите правильный ответ"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+	<RadioGroup
+		android:id="@+id/radioGroup1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<RadioButton
+			android:id="@+id/radioCrow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:checked="false"
+			android:onClick="onRadioClick"
+			android:text="Ворона"/>
+		<RadioButton
+			android:id="@+id/radioDog"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="onRadioClick"
+			android:text="Песик"/>
+		<RadioButton
+			android:id="@+id/radioCat"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="onRadioClick"
+			android:text="Кот Васька"/>
+	</RadioGroup>
+</LinearLayout>

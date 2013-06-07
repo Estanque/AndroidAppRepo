@@ -1,45 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			  	android:layout_width="fill_parent"
-			  	android:layout_height="fill_parent"
+			  	android:layout_width="match_parent"
+			  	android:layout_height="match_parent"
 				android:orientation="vertical"
-				android:id="@+id/linearLayout">
+				android:id="@+id/linearLayout1"
+				android:padding="5dp">
 	<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Кому:"
-			android:id="@+id/textView" android:layout_gravity="left|center_vertical" android:singleLine="false"/>
-	<EditText
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="мартышка"
-			android:id="@+id/edUserName"/>
+		android:id="@+id/tvLabel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/who"
+		android:textAppearance="?android:attr/textAppearanceMedium"/>
 	<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Описание:"
-			android:id="@+id/textView1" android:layout_gravity="left|center_vertical"/>
-	<EditText
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="пламенный привет"
-			android:id="@+id/edDescription"/>
-	<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Отправитель:"
-			android:id="@+id/textView2" android:layout_gravity="left|center_vertical"/>
-	<EditText
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="собаченок"
-			android:id="@+id/edAuthor"/>
+		android:id="@+id/tvInfo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"/>
 	<Button
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Button #1"
-			android:id="@+id/buttonOne"
-			android:onClick="buttonClick"
-			android:layout_gravity="center" android:layout_marginTop="10dp"/>
+		android:id="@+id/button1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="onClick"
+		android:text="Сделать выбор"/>
 </LinearLayout>
 
