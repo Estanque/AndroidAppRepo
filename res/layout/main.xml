@@ -2,39 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			  	android:layout_width="match_parent"
 			  	android:layout_height="match_parent"
-				android:id="@+id/relativeLayout"
-				android:background="@color/redColor">
+				android:id="@+id/relativeLayout">
 	<Button
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_alignParentLeft="true"
 			android:layout_alignParentTop="true"
-			android:text="@string/green"
-			android:id="@+id/buttonGreen"
+			android:text="Button #1"
+			android:id="@+id/buttonOne"
 			android:onClick="buttonClick"
 			android:layout_marginTop="15dp"/>
-	<Button
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_alignParentLeft="true"
-			android:layout_below="@+id/buttonGreen"
-			android:text="@string/yellow"
-			android:id="@+id/buttonYellow"
-			android:onClick="buttonClick"/>
-	<Button
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_alignParentLeft="true"
-			android:layout_below="@+id/buttonYellow"
-			android:text="@string/red"
-			android:id="@+id/buttonRed"
-			android:onClick="buttonClick"/>
 	<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="@string/red"
+			android:text="Hello"
 			android:id="@+id/textView"
-			android:layout_centerHorizontal="true" android:layout_below="@+id/buttonRed" android:layout_margin="15dp"
+			android:layout_centerHorizontal="true" android:layout_below="@+id/buttonOne" android:layout_margin="15dp"
 			android:textSize="25dp"/>
 </RelativeLayout>
 

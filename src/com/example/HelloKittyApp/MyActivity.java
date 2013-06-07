@@ -1,6 +1,7 @@
 package com.example.HelloKittyApp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -20,19 +21,11 @@ public class MyActivity extends Activity {
 
 	public void buttonClick(View v){
 		switch (v.getId()){
-			case R.id.buttonGreen:
-				tvInfo.setText(R.string.green);
-				relativeLayout.setBackgroundResource(R.color.greenColor);
+			case R.id.buttonOne:
+				Intent intent = new Intent(MyActivity.this,AboutActivity.class);
+				startActivity(intent);
 				break;
-			case R.id.buttonYellow:
-				tvInfo.setText(R.string.yellow);
-				relativeLayout.setBackgroundResource(R.color.yellowColor);
-				break;
-			case R.id.buttonRed:
-				tvInfo.setText(R.string.red);
-				relativeLayout.setBackgroundResource(R.color.redColor);
-				break;
-		}
 
+		}
 	}
 }
