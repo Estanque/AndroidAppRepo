@@ -4,12 +4,19 @@
 			  android:layout_width="fill_parent"
 			  android:layout_height="fill_parent"
 			  android:background="@color/myColor">
-	<ImageButton
-			android:layout_width="wrap_content"
+	<Button
+			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/imageButton" android:layout_gravity="center" android:focusable="false"
-			android:src="@drawable/pinkhellokitty" android:layout_marginBottom="20dp" android:layout_marginTop="60dp"
-			android:onClick="onClick"/>
+			android:text="Count Crows"
+			android:id="@+id/buttonCrows"
+			android:onClick="buttonCrows_Click"
+			android:layout_gravity="center"/>
+	<Button
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Count Cats"
+			android:id="@+id/buttonCats"
+			android:layout_gravity="center"/>
 	<TextView
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
