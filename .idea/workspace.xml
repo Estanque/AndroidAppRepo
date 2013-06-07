@@ -24,23 +24,15 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a4edfdb-bc93-4465-b998-ad67d348b492" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/HelloKittyApp/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/example/HelloKittyApp/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/HelloKittyApp/Manifest.java" afterPath="$PROJECT_DIR$/gen/com/example/HelloKittyApp/Manifest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/HelloKittyApp/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/example/HelloKittyApp/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/example/HelloKittyApp/R.java" afterPath="$PROJECT_DIR$/gen/com/example/HelloKittyApp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
+    <list default="true" id="4a4edfdb-bc93-4465-b998-ad67d348b492" name="Default" comment="Sending message to Activity">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\WorkFolder\Java\Android\AndroidAppRepo\res\layout\about.xml" afterPath="$PROJECT_DIR$/res/layout/hello.xml" />
-      <change type="MOVED" beforePath="D:\WorkFolder\Java\Android\AndroidAppRepo\src\com\example\HelloKittyApp\AboutActivity.java" afterPath="$PROJECT_DIR$/src/com/example/HelloKittyApp/HelloActivity.java" />
     </list>
     <ignored path="HelloKittyApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370584244511" ignored="false" />
     <file path="/strings.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370581135260" ignored="false" />
     <file path="/MyActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370584290148" ignored="false" />
-    <file path="/Dummy.txt" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370584832368" ignored="false" />
+    <file path="/Dummy.txt" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370598931806" ignored="false" />
     <file path="/about.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370583299760" ignored="false" />
     <file path="/AboutActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370584340017" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370581612593" ignored="false" />
@@ -60,6 +52,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -95,7 +88,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -108,7 +100,7 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="290" selection-end="290" vertical-scroll-proportion="0.510929">
+            <state line="22" column="36" selection-start="633" selection-end="633" vertical-scroll-proportion="0.46524063">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,7 +138,7 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="48" selection-start="724" selection-end="724" vertical-scroll-proportion="-6.12">
+            <state line="18" column="48" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,7 +150,7 @@
       <file leaf-file-name="hello.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/hello.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="215" selection-end="215" vertical-scroll-proportion="-1.7">
+            <state line="5" column="36" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,7 +162,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="-8.16">
+            <state line="12" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -186,6 +178,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Estanque" />
         <option value="Andrey" />
       </list>
     </option>
@@ -269,8 +262,8 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="3.2worked" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -309,6 +302,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -335,19 +341,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -451,6 +444,11 @@
       <created>1370484532215</created>
       <updated>1370484532215</updated>
     </task>
+    <task id="LOCAL-00001" summary="Sending message to Activity">
+      <created>1370584870236</created>
+      <updated>1370584870236</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -475,13 +473,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.7025641" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22424242" sideWeight="0.7025641" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.6700855" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.6700855" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -491,7 +486,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.32649574" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32600734" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -500,10 +494,14 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924242" sideWeight="0.99808794" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2974359" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18712121" sideWeight="0.7025641" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22424242" sideWeight="0.7025641" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.6700855" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -569,13 +567,13 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state line="7" column="47" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
@@ -602,13 +600,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="40" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MyActivity.java">
@@ -633,28 +631,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="48" selection-start="724" selection-end="724" vertical-scroll-proportion="-6.12">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="48" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/hello.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="215" selection-end="215" vertical-scroll-proportion="-1.7">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="36" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="-8.16">
+        <state line="12" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -675,9 +673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/com/example/HelloKittyApp/BuildConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="106" selection-end="106" vertical-scroll-proportion="0.13934426">
-          <folding />
-        </state>
+        <state line="3" column="19" selection-start="106" selection-end="106" vertical-scroll-proportion="0.13934426" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/HelloActivity.java">
@@ -689,7 +685,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="290" selection-end="290" vertical-scroll-proportion="0.510929">
+        <state line="22" column="36" selection-start="633" selection-end="633" vertical-scroll-proportion="0.46524063">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
