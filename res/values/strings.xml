@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">HelloKittyApp</string>
-	<string name="about_title">О программе</string>
-	<string name="button1">button1</string>
-	<string name="button2">button2</string>
-	<string name="button3">button3</string>
-	<string name="button4">button4</string>
-	<string name="button5">button5</string>
-	<string name="button6">button6</string>
+	<string name="app_name">Settings</string>
+	<string name="action_settings">Настройки</string>
+	<string name="action_cat_male">Cat</string>
+	<string name="action_cat_female">Catty</string>
+	<string name="action_cat_kitten">Kitty</string>
 </resources>
