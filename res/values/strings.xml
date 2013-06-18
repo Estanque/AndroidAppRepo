@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Settings</string>
-	<string name="action_settings">Настройки</string>
-	<string name="action_cat_male">Cat</string>
-	<string name="action_cat_female">Catty</string>
-	<string name="action_cat_kitten">Kitty</string>
+	<string name="app_name">Dynamic Layout</string>
 </resources>

@@ -5,49 +5,53 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.*;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity
+		implements SeekBar.OnSeekBarChangeListener {
 
-	public static final String FILENAME = "sample.txt";
-	private EditText mEdit;
+	SeekBar sbWeight;
+	Button btn1;
+	Button btn2;
+
+	LinearLayout.LayoutParams lParams1;
+	LinearLayout.LayoutParams lParams2;
 
 	@Override
 	public void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		sbWeight = (SeekBar) findViewById(R.id.sbWeight);
+		// Setup Listeners on SeekBar (!NECESSARY)
+		sbWeight.setOnSeekBarChangeListener(this);
+
+		btn1 = (Button) findViewById(R.id.btn1);
+		btn2 = (Button) findViewById(R.id.btn2);
+
+		lParams1 = (LinearLayout.LayoutParams) btn1.getLayoutParams();
+		lParams2 = (LinearLayout.LayoutParams) btn2.getLayoutParams();
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		TextView tvInfo = (TextView) findViewById(R.id.tvInfo);
-
-		switch (item.getItemId()){
-			case R.id.action_cat1:
-				tvInfo.setText("1 cat");
-				return true;
-			case R.id.action_cat2:
-				tvInfo.setText("2 cat");
-				return true;
-			case R.id.action_cat3:
-				tvInfo.setText("3 cat");
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
-		}
+	public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+		int leftValue = progress;
+		int rightValue = seekBar.getMax() - progress;
+		// Setup weight
+		lParams1.weight = leftValue;
+		lParams2.weight = rightValue;
+		// Write values to button.text
+		btn1.setText(String.valueOf(leftValue));
+		btn2.setText(String.valueOf(rightValue));
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu){
-		super.onCreateOptionsMenu(menu);
-		MenuInflater inflater =  getMenuInflater();
-		inflater.inflate(R.menu.main, menu);
-		return true;
+	public void onStartTrackingTouch(SeekBar seekBar) {
+		//To change body of implemented methods use File | Settings | File Templates.
 	}
 
-	public void onSettingsMenuClick(MenuItem item){
-		TextView tvInfo = (TextView) findViewById(R.id.tvInfo);
-		tvInfo.setText("Settings");
+	@Override
+	public void onStopTrackingTouch(SeekBar seekBar) {
+		//To change body of implemented methods use File | Settings | File Templates.
 	}
 }
