@@ -12,12 +12,7 @@
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
 		</activity>
-		<activity android:name=".ActivityInfo">
-			<intent-filter>
-				<action android:name="com.example.intent.action.showtime"/>
-				<action android:name="com.example.intent.action.showdate"/>
-				<category android:name="android.intent.category.DEFAULT"/>
-			</intent-filter>
+		<activity android:name=".ViewActivity">
 		</activity>
 	</application>
 </manifest>
