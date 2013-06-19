@@ -9,28 +9,29 @@ import android.widget.*;
 public class MainActivity extends Activity
 							implements View.OnClickListener {
 
-	EditText etFName;
-	EditText etLName;
-
-	Button btnSubmit;
+	Button btnName;
+	TextView tvName;
 
 	@Override
 	public void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.main);
 
-		etFName = (EditText) findViewById(R.id.etFName);
-		etLName = (EditText) findViewById(R.id.etLName);
-
-		btnSubmit = (Button) findViewById(R.id.btnSubmit);
-		btnSubmit.setOnClickListener(this);
+		tvName = (TextView)findViewById(R.id.tvName);
+		btnName = (Button) findViewById(R.id.btnName);
+		btnName.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View view) {
-		Intent intent = new Intent(this,ViewActivity.class);
-		intent.putExtra("fname",etFName.getText().toString());
-		intent.putExtra("lname",etLName.getText().toString());
-		startActivity(intent);
+		Intent intent = new Intent(this,NameActivity.class);
+		startActivityForResult(intent,1);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data){
+		if (data == null) {return;}
+		String name = data.getStringExtra("name");
+		tvName.setText("Your name is "+name);
 	}
 }
