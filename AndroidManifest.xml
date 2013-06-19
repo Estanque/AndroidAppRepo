@@ -12,9 +12,13 @@
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
 		</activity>
-		<activity android:name=".ColorActivity">
+		<activity android:name=".BrowserActivity" android:label="myBrowser">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+				<data android:scheme="http"/>
+			</intent-filter>
 		</activity>
-		<activity android:name=".AlignActivity"/>
 	</application>
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

@@ -27,6 +27,8 @@
     <list default="true" id="4a4edfdb-bc93-4465-b998-ad67d348b492" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant.properties" afterPath="$PROJECT_DIR$/ant.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,13 +37,13 @@
     <file path="/main.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371630708750" ignored="false" />
     <file path="/strings.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371556790239" ignored="false" />
     <file path="/MyActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370606365258" ignored="false" />
-    <file path="/Dummy.txt" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371628104768" ignored="false" />
+    <file path="/Dummy.txt" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371632525852" ignored="false" />
     <file path="/about.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370583299760" ignored="false" />
     <file path="/AboutActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370584340017" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371631275539" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371632332223" ignored="false" />
     <file path="/hello.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370600509960" ignored="false" />
     <file path="/HelloActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370605342199" ignored="false" />
-    <file path="/MainActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371631070290" ignored="false" />
+    <file path="/MainActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371631609315" ignored="false" />
     <file path="/activity_main.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371621734957" ignored="false" />
     <file path="/a.dummy" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371622346591" ignored="false" />
     <file path="/fragment_edit_name.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371560253532" ignored="false" />
@@ -59,10 +61,11 @@
     <file path="/ViewActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371621558282" ignored="false" />
     <file path="/name.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371622907657" ignored="false" />
     <file path="/NameActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371623125277" ignored="false" />
-    <file path="/color.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371626905719" ignored="false" />
-    <file path="/ColorActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371627112023" ignored="false" />
+    <file path="/color.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371632119929" ignored="false" />
+    <file path="/ColorActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371632208695" ignored="false" />
     <file path="/align.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371627197691" ignored="false" />
     <file path="/AlignActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371627480987" ignored="false" />
+    <file path="/browser.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371632097857" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,42 +134,29 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="36" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0">
+            <state line="24" column="39" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/ColorActivity.java">
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="5" selection-start="327" selection-end="1139" vertical-scroll-proportion="0.0">
+            <state line="74" column="65" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.7406417">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="align.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/align.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="BrowserActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/BrowserActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="35" selection-start="414" selection-end="414" vertical-scroll-proportion="-4.64">
+            <state line="16" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlignActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/AlignActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="9" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -174,31 +164,31 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="43" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
+            <state line="6" column="35" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="427" selection-end="427" vertical-scroll-proportion="0.584375">
+            <state line="12" column="4" selection-start="432" selection-end="432" vertical-scroll-proportion="-7.36">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="color.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/color.xml">
+      <file leaf-file-name="browser.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/browser.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="44" selection-start="380" selection-end="380" vertical-scroll-proportion="-5.32">
+            <state line="9" column="46" selection-start="382" selection-end="382" vertical-scroll-proportion="-6.12">
               <folding />
             </state>
           </provider>
@@ -244,8 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout/date_ex.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/HelloKittyApp/ActivityDateEx.java" />
         <option value="$PROJECT_DIR$/src/com/example/HelloKittyApp/ActivityIbnfo.java" />
         <option value="$PROJECT_DIR$/src/com/example/HelloKittyApp/ActivityInfo.java" />
         <option value="$PROJECT_DIR$/res/layout/view.xml" />
@@ -259,14 +247,17 @@
         <option value="$PROJECT_DIR$/src/com/example/HelloKittyApp/AlignActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/browser.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/HelloKittyApp/BrowserActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -636,7 +627,11 @@
       <created>1371628112464</created>
       <updated>1371628112464</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Using URI data">
+      <created>1371631416403</created>
+      <updated>1371631416403</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -660,7 +655,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21742424" sideWeight="0.6006826" order="3" side_tool="false" content_ui="tabs" />
@@ -675,14 +670,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5006605" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.32649574" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31740615" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32600734" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959743" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.85024154" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.60225445" sideWeight="0.67155963" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28073394" sideWeight="0.4993395" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28073394" sideWeight="0.4993395" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -735,7 +730,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Return Extra from Summoned Activity&#10;Adding requestCode and resultCode. More difficult example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple Browser" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -756,6 +751,8 @@
     <MESSAGE value="Send Extra to Activity through Intent" />
     <MESSAGE value="Return Extra from Summoned Activity" />
     <MESSAGE value="Return Extra from Summoned Activity&#10;Adding requestCode and resultCode. More difficult example" />
+    <MESSAGE value="Using URI data" />
+    <MESSAGE value="Simple Browser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -823,64 +820,53 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/color.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="380" selection-end="380" vertical-scroll-proportion="-5.32">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/align.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="35" selection-start="414" selection-end="414" vertical-scroll-proportion="-4.64">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/ColorActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="5" selection-start="327" selection-end="1139" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/AlignActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="9" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="36" selection-start="932" selection-end="932" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="43" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="427" selection-end="427" vertical-scroll-proportion="0.584375">
+        <state line="12" column="4" selection-start="432" selection-end="432" vertical-scroll-proportion="-7.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/browser.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="46" selection-start="382" selection-end="382" vertical-scroll-proportion="-6.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/BrowserActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="39" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="65" selection-start="2859" selection-end="2859" vertical-scroll-proportion="0.7406417">
           <folding />
         </state>
       </provider>

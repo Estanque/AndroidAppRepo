@@ -10,19 +10,5 @@
 		android:layout_margin="10dp"
 		android:layout_weight="1"
 		android:text="Web"/>
-	<Button
-		android:id="@+id/btnMap"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_margin="10dp"
-		android:layout_weight="1"
-		android:text="Map"/>
-	<Button
-		android:id="@+id/btnCall"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_margin="10dp"
-		android:layout_weight="1"
-		android:text="Call"/>
 </LinearLayout>
 

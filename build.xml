@@ -12,9 +12,9 @@
 		 Here are some properties you may want to change/update:
 
 		 source.dir
-			 The color of the source directory. Default is 'src'.
+			 The browser of the source directory. Default is 'src'.
 		 out.dir
-			 The color of the output directory. Default is 'bin'.
+			 The browser of the output directory. Default is 'bin'.
 
 		 For other overridable properties, look at the beginning of the rules
 		 files in the SDK, at tools/ant/build.xml
