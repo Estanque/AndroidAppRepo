@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Preferences saving and loading</string>
+	<string name="app_name">Inflator example</string>
 </resources>

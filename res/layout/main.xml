@@ -3,25 +3,25 @@
 			  	android:layout_width="match_parent"
 			  	android:layout_height="match_parent"
 				android:orientation="vertical">
-	<EditText
-		android:id="@+id/edText"
-	    android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
 	<LinearLayout
-		android:id="@+id/linearLayout"
+		android:id="@+id/linLayout"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:orientation="horizontal">
-	<Button
-		android:id="@+id/btnSave"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="Save"/>
-	<Button
-			android:id="@+id/btnLoad"
+		android:layout_margin="20dp">
+		<TextView
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Load"/>
-	</LinearLayout>
+		    android:layout_height="wrap_content"
+		    android:text="Linear Layout: "/>
+    </LinearLayout>
+	<RelativeLayout
+		android:id="@+id/relLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="20dp">
+		<TextView
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Relative Layout: "/>
+	    </RelativeLayout>
 </LinearLayout>
 
