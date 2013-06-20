@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Inflator example</string>
+	<string name="app_name">List View Example</string>
+	<string name="hello">hello</string>
 </resources>
