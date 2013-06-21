@@ -25,20 +25,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a4edfdb-bc93-4465-b998-ad67d348b492" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HelloKittyApp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371712371851" ignored="false" />
+    <file path="/main.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371798867964" ignored="false" />
     <file path="/strings.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371794117153" ignored="false" />
     <file path="/MyActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370606365258" ignored="false" />
-    <file path="/Dummy.txt" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371796523568" ignored="false" />
+    <file path="/Dummy.txt" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371797346424" ignored="false" />
     <file path="/about.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370583299760" ignored="false" />
     <file path="/AboutActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370584340017" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371634052329" ignored="false" />
     <file path="/hello.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370600509960" ignored="false" />
     <file path="/HelloActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1370605342199" ignored="false" />
-    <file path="/MainActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371791862884" ignored="false" />
+    <file path="/MainActivity.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371798870351" ignored="false" />
     <file path="/activity_main.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371621734957" ignored="false" />
     <file path="/a.dummy" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371622346591" ignored="false" />
     <file path="/fragment_edit_name.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371560253532" ignored="false" />
@@ -48,7 +50,7 @@
     <file path="/ActivityTime.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371611612236" ignored="false" />
     <file path="/date.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371611774056" ignored="false" />
     <file path="/ActivityDate.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371611943023" ignored="false" />
-    <file path="/fragment.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371613195863" ignored="false" />
+    <file path="/fragment.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371797655607" ignored="false" />
     <file path="/date_ex.xml" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371612101051" ignored="false" />
     <file path="/ActivityDateEx.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371612226007" ignored="false" />
     <file path="/ActivityInfo.java" changelist="4a4edfdb-bc93-4465-b998-ad67d348b492" time="1371613102069" ignored="false" />
@@ -130,13 +132,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+            <state line="98" column="24" selection-start="3177" selection-end="3177" vertical-scroll-proportion="0.46107784">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#766#998#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,7 +155,7 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="-6.6666665">
+            <state line="6" column="26" selection-start="274" selection-end="274" vertical-scroll-proportion="-3.3333333">
               <folding />
             </state>
           </provider>
@@ -163,10 +164,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.5988024">
+            <state line="19" column="12" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,15 +219,15 @@
         <option value="$PROJECT_DIR$/res/layout/text.xml" />
         <option value="$PROJECT_DIR$/res/layout/item.xml" />
         <option value="$PROJECT_DIR$/res/values/my_list_item.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="353" />
-    <option name="y" value="44" />
+    <option name="x" value="619" />
+    <option name="y" value="22" />
     <option name="width" value="881" />
     <option name="height" value="860" />
   </component>
@@ -397,7 +398,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="editing.templates" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="80A354043049910583" />
@@ -661,7 +662,11 @@
       <created>1371796526782</created>
       <updated>1371796526782</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ListView example with selection and scrool">
+      <created>1371797349322</created>
+      <updated>1371797349322</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -685,7 +690,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="353" y="44" width="881" height="860" extended-state="0" />
+    <frame x="619" y="22" width="881" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32567567" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -694,7 +699,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39864865" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28513515" sideWeight="0.15966387" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28513515" sideWeight="0.5017964" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.32649574" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31740615" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -703,8 +708,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959743" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.85024154" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33772454" sideWeight="0.6013514" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28513515" sideWeight="0.4982036" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33772454" sideWeight="0.71486485" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28513515" sideWeight="0.4982036" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21742424" sideWeight="0.6006826" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -886,19 +891,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#766#998#0" expanded="true" />
-          </folding>
+        <state line="19" column="12" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="-6.6666665">
+        <state line="6" column="26" selection-start="274" selection-end="274" vertical-scroll-proportion="-3.3333333">
           <folding />
         </state>
       </provider>
@@ -906,10 +908,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/example/HelloKittyApp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="481" selection-end="481" vertical-scroll-proportion="0.5988024">
-          <folding />
+        <state line="98" column="24" selection-start="3177" selection-end="3177" vertical-scroll-proportion="0.46107784">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

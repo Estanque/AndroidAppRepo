@@ -2,63 +2,109 @@ package com.example.HelloKittyApp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.ExpandableListView;
+import android.widget.SimpleExpandableListAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class MainActivity extends Activity {
 
-	final  String LOG_TAG = "myLogs";
+	// названия компаний (групп)
+	String[] groups = new String[] {"HTC", "Samsung", "LG"};
 
-	ListView lvMain;
+	// названия телефонов (элементов)
+	String[] phonesHTC = new String[] {"Sensation", "Desire", "Wildfire", "Hero"};
+	String[] phonesSams = new String[] {"Galaxy S II", "Galaxy Nexus", "Wave"};
+	String[] phonesLG = new String[] {"Optimus", "Optimus Link", "Optimus Black", "Optimus One"};
+
+	//Collection for groups
+	ArrayList<Map<String, String>> groupData;
+
+	//collection for elements in each group
+	ArrayList<Map<String, String>> childDataItem;
+
+	//Common collection for element collections
+	ArrayList<ArrayList<Map<String, String>>> childData;
+	// childData = ArralyList<childDataItem>
+
+	//list of attributes of group or element
+	Map<String,String> m;
+
+	ExpandableListView elvMain;
 
 	@Override
 	public void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		lvMain = (ListView) findViewById(R.id.lvMain);
+		// заполняем коллекцию групп из массива с названиями групп
+		groupData = new ArrayList<Map<String, String>>();
+		for (String group : groups) {
+			// заполняем список аттрибутов для каждой группы
+			m = new HashMap<String, String>();
+			m.put("groupName", group); // имя компании
+			groupData.add(m);
+		}
 
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-				this, R.array.names, android.R.layout.simple_list_item_1);
-		lvMain.setAdapter(adapter);
+		// список аттрибутов групп для чтения
+		String groupFrom[] = new String[] {"groupName"};
+		// список ID view-элементов, в которые будет помещены аттрибуты групп
+		int groupTo[] = new int[] {android.R.id.text1};
 
-		lvMain.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-			@Override
-			public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-				Log.d(LOG_TAG, "itemClick: position = " + position + ", id = "
-						+ id);
-			}
-		});
+		// создаем коллекцию для коллекций элементов
+		childData = new ArrayList<ArrayList<Map<String, String>>>();
 
-		lvMain.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-			@Override
-			public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
-				Log.d(LOG_TAG, "itemSelect: position = " + position + ", id = "
-						+ id);
-			}
+		// создаем коллекцию элементов для первой группы
+		childDataItem = new ArrayList<Map<String, String>>();
+		// заполняем список аттрибутов для каждого элемента
+		for (String phone : phonesHTC) {
+			m = new HashMap<String, String>();
+			m.put("phoneName", phone); // название телефона
+			childDataItem.add(m);
+		}
+		// добавляем в коллекцию коллекций
+		childData.add(childDataItem);
 
-			@Override
-			public void onNothingSelected(AdapterView<?> adapterView) {
-				Log.d(LOG_TAG, "itemSelect: nothing");
-			}
-		});
+		// создаем коллекцию элементов для второй группы
+		childDataItem = new ArrayList<Map<String, String>>();
+		for (String phone : phonesSams) {
+			m = new HashMap<String, String>();
+			m.put("phoneName", phone);
+			childDataItem.add(m);
+		}
+		childData.add(childDataItem);
 
-		lvMain.setOnScrollListener(new AbsListView.OnScrollListener() {
-			public void onScrollStateChanged(AbsListView view, int scrollState) {
-				Log.d(LOG_TAG, "scrollState = " + scrollState);
-			}
+		// создаем коллекцию элементов для третьей группы
+		childDataItem = new ArrayList<Map<String, String>>();
+		for (String phone : phonesLG) {
+			m = new HashMap<String, String>();
+			m.put("phoneName", phone);
+			childDataItem.add(m);
+		}
+		childData.add(childDataItem);
 
-			public void onScroll(AbsListView view, int firstVisibleItem,
-			                     int visibleItemCount, int totalItemCount) {
-				//Log.d(LOG_TAG, "scroll: firstVisibleItem = " + firstVisibleItem
-				//    + ", visibleItemCount" + visibleItemCount
-				//    + ", totalItemCount" + totalItemCount);
-			}
-		});
+		// список аттрибутов элементов для чтения
+		String childFrom[] = new String[] {"phoneName"};
+		// список ID view-элементов, в которые будет помещены аттрибуты элементов
+		int childTo[] = new int[] {android.R.id.text1};
+
+		SimpleExpandableListAdapter adapter = new SimpleExpandableListAdapter(
+				this,
+				groupData,
+				android.R.layout.simple_expandable_list_item_1,
+				groupFrom,
+				groupTo,
+				childData,
+				android.R.layout.simple_list_item_1,
+				childFrom,
+				childTo);
+
+		elvMain = (ExpandableListView) findViewById(R.id.elvMain);
+		elvMain.setAdapter(adapter);
+
+
 	}
 }
