@@ -2,8 +2,11 @@ package com.example.HelloKittyApp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 
@@ -13,85 +16,73 @@ import java.util.List;
 import java.util.Map;
 
 /*
-	http://startandroid.ru/ru/uroki/vse-uroki-spiskom/109-urok-50-simpleadapter-ispolzuem-viewbinder.html
+	http://startandroid.ru/ru/uroki/vse-uroki-spiskom/111-urok-52-simplecursoradapter-primer-ispolzovanija.html
  */
 
 public class MainActivity extends Activity {
 
-	// имена атрибутов для Map
-	final String ATTRIBUTE_NAME_TEXT = "text";
-	final String ATTRIBUTE_NAME_PB = "pb";
-	final String ATTRIBUTE_NAME_LL = "ll";
-
-	// картинки для отображения динамики
-	final int positive = android.R.drawable.arrow_up_float;
-	final int negative = android.R.drawable.arrow_down_float;
-
-	ListView lvSimple;
+	private static final int CM_DELETE_ID = 1;
+	ListView lvData;
+	DB db;
+	SimpleCursorAdapter scAdapter;
+	Cursor cursor;
 
 	/** Called when the activity is first created. */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		// массив данных
-		int load[] = { 41, 48, 22, 35, 30, 67, 51, 88 };
+		// открываем подключение к БД
+		db = new DB(this);
+		db.open();
 
-		// упаковываем данные в понятную для адаптера структуру
-		ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>(
-				load.length);
-		Map<String, Object> m;
-		for (int i = 0; i < load.length; i++) {
-			m = new HashMap<String, Object>();
-			m.put(ATTRIBUTE_NAME_TEXT, "Day " + (i+1) + ". Load: " + load[i] + "%");
-			m.put(ATTRIBUTE_NAME_PB, load[i]);
-			m.put(ATTRIBUTE_NAME_LL, load[i]);
-			data.add(m);
-		}
+		// получаем курсор
+		cursor = db.getAllData();
+		startManagingCursor(cursor);
 
-		// массив имен атрибутов, из которых будут читаться данные
-		String[] from = { ATTRIBUTE_NAME_TEXT, ATTRIBUTE_NAME_PB,
-				ATTRIBUTE_NAME_LL };
-		// массив ID View-компонентов, в которые будут вставлять данные
-		int[] to = { R.id.tvLoad, R.id.pbLoad, R.id.llLoad };
+		// формируем столбцы сопоставления
+		String[] from = new String[] { DB.COLUMN_IMG, DB.COLUMN_TXT };
+		int[] to = new int[] { R.id.ivImg, R.id.tvText };
 
-		// создаем адаптер
-		SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.item,
-				from, to);
-		// Указываем адаптеру свой биндер
-		sAdapter.setViewBinder(new MyViewBinder());
+		// создааем адаптер и настраиваем список
+		scAdapter = new SimpleCursorAdapter(this, R.layout.item, cursor, from, to);
+		lvData = (ListView) findViewById(R.id.lvData);
+		lvData.setAdapter(scAdapter);
 
-		// определяем список и присваиваем ему адаптер
-		lvSimple = (ListView) findViewById(R.id.lvSimple);
-		lvSimple.setAdapter(sAdapter);
+		// добавляем контекстное меню к списку
+		registerForContextMenu(lvData);
 	}
 
-	class MyViewBinder implements SimpleAdapter.ViewBinder {
-
-		int red = getResources().getColor(R.color.Red);
-		int orange = getResources().getColor(R.color.Orange);
-		int green = getResources().getColor(R.color.Green);
-
-		@Override
-		public boolean setViewValue(View view, Object data, String textRepresentation) {
-			int i = 0;
-			switch (view.getId()){
-				// LinearLayout
-				case R.id.llLoad:
-					i = ((Integer) data).intValue();
-					if (i<40) view.setBackgroundColor(green); else
-						if (i<70) view.setBackgroundColor(orange); else
-							view.setBackgroundColor(red);
-					return true;
-				// ProgressBar
-				case R.id.pbLoad:
-					i = ((Integer) data).intValue();
-					((ProgressBar) view).setProgress(i);
-					return true;
-			}
-			return false;  //To change body of implemented methods use File | Settings | File Templates.
-		}
+	// обработка нажатия кнопки
+	public void onButtonClick(View view) {
+		// добавляем запись
+		db.addRec("sometext " + (cursor.getCount() + 1), R.drawable.ic_launcher);
+		// обновляем курсор
+		cursor.requery();
 	}
 
+	public void onCreateContextMenu(ContextMenu menu, View v,
+	                                ContextMenu.ContextMenuInfo menuInfo) {
+		super.onCreateContextMenu(menu, v, menuInfo);
+		menu.add(0, CM_DELETE_ID, 0, R.string.delete_record);
+	}
 
+	public boolean onContextItemSelected(MenuItem item) {
+		if (item.getItemId() == CM_DELETE_ID) {
+			// получаем из пункта контекстного меню данные по пункту списка
+			AdapterView.AdapterContextMenuInfo acmi = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+			// извлекаем id записи и удаляем соответствующую запись в БД
+			db.delRec(acmi.id);
+			// обновляем курсор
+			cursor.requery();
+			return true;
+		}
+		return super.onContextItemSelected(item);
+	}
+
+	protected void onDestroy() {
+		super.onDestroy();
+		// закрываем подключение при выходе
+		db.close();
+	}
 }
