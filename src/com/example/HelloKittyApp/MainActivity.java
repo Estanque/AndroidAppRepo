@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.*;
 
 import java.util.ArrayList;
@@ -11,12 +12,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+	http://startandroid.ru/ru/uroki/vse-uroki-spiskom/109-urok-50-simpleadapter-ispolzuem-viewbinder.html
+ */
+
 public class MainActivity extends Activity {
 
 	// имена атрибутов для Map
 	final String ATTRIBUTE_NAME_TEXT = "text";
-	final String ATTRIBUTE_NAME_VALUE = "value";
-	final String ATTRIBUTE_NAME_IMAGE = "image";
+	final String ATTRIBUTE_NAME_PB = "pb";
+	final String ATTRIBUTE_NAME_LL = "ll";
 
 	// картинки для отображения динамики
 	final int positive = android.R.drawable.arrow_up_float;
@@ -30,65 +35,63 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.main);
 
 		// массив данных
-		int[] values = { 8, 4, -3, 2, -5, 0, 3, -6, 1, -1 };
+		int load[] = { 41, 48, 22, 35, 30, 67, 51, 88 };
 
 		// упаковываем данные в понятную для адаптера структуру
 		ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>(
-				values.length);
+				load.length);
 		Map<String, Object> m;
-		int img = 0;
-		for (int i = 0; i < values.length; i++) {
+		for (int i = 0; i < load.length; i++) {
 			m = new HashMap<String, Object>();
-			m.put(ATTRIBUTE_NAME_TEXT, "Day " + (i + 1));
-			m.put(ATTRIBUTE_NAME_VALUE, values[i]);
-			if (values[i] == 0) img = 0; else
-				img = (values[i] > 0) ? positive : negative;
-			m.put(ATTRIBUTE_NAME_IMAGE, img);
+			m.put(ATTRIBUTE_NAME_TEXT, "Day " + (i+1) + ". Load: " + load[i] + "%");
+			m.put(ATTRIBUTE_NAME_PB, load[i]);
+			m.put(ATTRIBUTE_NAME_LL, load[i]);
 			data.add(m);
 		}
 
 		// массив имен атрибутов, из которых будут читаться данные
-		String[] from = { ATTRIBUTE_NAME_TEXT, ATTRIBUTE_NAME_VALUE,
-				ATTRIBUTE_NAME_IMAGE };
+		String[] from = { ATTRIBUTE_NAME_TEXT, ATTRIBUTE_NAME_PB,
+				ATTRIBUTE_NAME_LL };
 		// массив ID View-компонентов, в которые будут вставлять данные
-		int[] to = { R.id.tvText, R.id.tvValue, R.id.ivImg };
+		int[] to = { R.id.tvLoad, R.id.pbLoad, R.id.llLoad };
 
 		// создаем адаптер
-		MySimpleAdapter sAdapter = new MySimpleAdapter(this, data,
-				R.layout.item, from, to);
+		SimpleAdapter sAdapter = new SimpleAdapter(this, data, R.layout.item,
+				from, to);
+		// Указываем адаптеру свой биндер
+		sAdapter.setViewBinder(new MyViewBinder());
 
 		// определяем список и присваиваем ему адаптер
 		lvSimple = (ListView) findViewById(R.id.lvSimple);
 		lvSimple.setAdapter(sAdapter);
 	}
 
-	class MySimpleAdapter extends SimpleAdapter {
+	class MyViewBinder implements SimpleAdapter.ViewBinder {
 
-		public MySimpleAdapter(Context context,
-		                       List<? extends Map<String, ?>> data, int resource,
-		                       String[] from, int[] to) {
-			super(context, data, resource, from, to);
-		}
+		int red = getResources().getColor(R.color.Red);
+		int orange = getResources().getColor(R.color.Orange);
+		int green = getResources().getColor(R.color.Green);
 
 		@Override
-		public void setViewText(TextView v, String text) {
-			// метод супер-класса, который вставляет текст
-			super.setViewText(v, text);
-			// если нужный нам TextView, то разрисовываем
-			if (v.getId() == R.id.tvValue) {
-				int i = Integer.parseInt(text);
-				if (i < 0) v.setTextColor(Color.RED); else
-				if (i > 0) v.setTextColor(Color.GREEN);
+		public boolean setViewValue(View view, Object data, String textRepresentation) {
+			int i = 0;
+			switch (view.getId()){
+				// LinearLayout
+				case R.id.llLoad:
+					i = ((Integer) data).intValue();
+					if (i<40) view.setBackgroundColor(green); else
+						if (i<70) view.setBackgroundColor(orange); else
+							view.setBackgroundColor(red);
+					return true;
+				// ProgressBar
+				case R.id.pbLoad:
+					i = ((Integer) data).intValue();
+					((ProgressBar) view).setProgress(i);
+					return true;
 			}
-		}
-
-		@Override
-		public void setViewImage(ImageView v, int value) {
-			// метод супер-класса
-			super.setViewImage(v, value);
-			// разрисовываем ImageView
-			if (value == negative) v.setBackgroundColor(Color.RED); else
-			if (value == positive) v.setBackgroundColor(Color.GREEN);
+			return false;  //To change body of implemented methods use File | Settings | File Templates.
 		}
 	}
+
+
 }
