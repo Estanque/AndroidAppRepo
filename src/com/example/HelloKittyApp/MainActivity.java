@@ -2,59 +2,53 @@ package com.example.HelloKittyApp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.SimpleExpandableListAdapter;
-import android.widget.TextView;
+import android.widget.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends Activity {
 
-	ExpandableListView elvMain;
-	AdapterHelper ah;
-	SimpleExpandableListAdapter adapter;
-	TextView tvInfo;
+	final String ATTRIBUTE_NAME_TEXT = "text";
+	final String ATTRIBUTE_NAME_CHECKED = "checked";
+	final String ATTRIBUTE_NAME_IMAGE = "image";
+
+	ListView lvSimple;
 
 	@Override
 	public void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		tvInfo = (TextView) findViewById(R.id.tvInfo);
+		//massive of data
+		String[] texts = { "sometext 1", "sometext 2", "sometext 3",
+				"sometext 4", "sometext 5" };
+		boolean[] checked = { true, false, false, true, false };
+		int img = R.drawable.ic_launcher;
 
-		//create adapter
-		ah = new AdapterHelper(this);
-		adapter = ah.getAdapter();
+		//packing data to structure
+		ArrayList<Map<String, Object>> data = new ArrayList<Map<String, Object>>(texts.length);
+		Map<String, Object> m;
+		for (int i = 0; i < texts.length; i++) {
+			m = new HashMap<String, Object>();
+			m.put(ATTRIBUTE_NAME_TEXT, texts[i]);
+			m.put(ATTRIBUTE_NAME_CHECKED, checked[i]);
+			m.put(ATTRIBUTE_NAME_IMAGE,img);
+			data.add(m);
+		}
 
-		elvMain = (ExpandableListView) findViewById(R.id.elvMain);
-		elvMain.setAdapter(adapter);
+		// массив имен атрибутов, из которых будут читаться данные
+		String[] from = {ATTRIBUTE_NAME_TEXT, ATTRIBUTE_NAME_CHECKED, ATTRIBUTE_NAME_IMAGE, ATTRIBUTE_NAME_TEXT};
 
-		//click on element
-		elvMain.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-			@Override
-			public boolean onChildClick(ExpandableListView expandableListView, View view, int groupPosition, int childPosition, long id) {
-				tvInfo.setText(ah.getGroupChildText(groupPosition, childPosition));
-				return false;
-			}
-		});
+		// массив ID View-компонентов, в которые будут вставлять данные
+		int[] to = {R.id.tvText,R.id.cbCheckbox, R.id.ivImg, R.id.cbCheckbox};
 
-		//click on group
-		elvMain.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-			@Override
-			public boolean onGroupClick(ExpandableListView expandableListView, View view, int groupPosition, long id) {
-				if (groupPosition ==1) {
-					return true;
-				}
-				return false;
-			}
-		});
+		// create adapter
+		SimpleAdapter simpleAdapter = new SimpleAdapter(this, data, R.layout.item, from, to);
 
-		elvMain.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-			@Override
-			public void onGroupExpand(int groupPosition) {
-				tvInfo.setText("Expand "+ah.getGroupText(groupPosition));
-			}
-		});
-
-		elvMain.expandGroup(2);
+		// define list and assign adapter to it
+		lvSimple = (ListView) findViewById(R.id.lvSimple);
+		lvSimple.setAdapter(simpleAdapter);
 	}
 }

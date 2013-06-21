@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">List View Select</string>
+	<string name="app_name">List View with Select and simple adapter</string>
 	<string name="hello">hello</string>
 	<string-array name="names">
 		 <item>Иван</item>
