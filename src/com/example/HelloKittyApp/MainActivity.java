@@ -1,9 +1,7 @@
 package com.example.HelloKittyApp;
 
 import android.app.Activity;
-import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuItem;
@@ -11,78 +9,47 @@ import android.view.View;
 import android.widget.*;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 
 /*
-	http://startandroid.ru/ru/uroki/vse-uroki-spiskom/111-urok-52-simplecursoradapter-primer-ispolzovanija.html
+http://startandroid.ru/ru/uroki/vse-uroki-spiskom/113-urok-54-kastomizatsija-spiska-sozdaem-svoj-adapter.html
  */
 
 public class MainActivity extends Activity {
 
-	private static final int CM_DELETE_ID = 1;
-	ListView lvData;
-	DB db;
-	SimpleCursorAdapter scAdapter;
-	Cursor cursor;
+	ArrayList<Product> products = new ArrayList<Product>();
+	BoxAdapter boxAdapter;
 
-	/** Called when the activity is first created. */
-	public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		// открываем подключение к БД
-		db = new DB(this);
-		db.open();
+		// creating adapter
+		fillData();
+		boxAdapter = new BoxAdapter(this, products);
 
-		// получаем курсор
-		cursor = db.getAllData();
-		startManagingCursor(cursor);
-
-		// формируем столбцы сопоставления
-		String[] from = new String[] { DB.COLUMN_IMG, DB.COLUMN_TXT };
-		int[] to = new int[] { R.id.ivImg, R.id.tvText };
-
-		// создааем адаптер и настраиваем список
-		scAdapter = new SimpleCursorAdapter(this, R.layout.item, cursor, from, to);
-		lvData = (ListView) findViewById(R.id.lvData);
-		lvData.setAdapter(scAdapter);
-
-		// добавляем контекстное меню к списку
-		registerForContextMenu(lvData);
+		// setup list
+		ListView lvMain = (ListView) findViewById(R.id.lvMain);
+		lvMain.setAdapter(boxAdapter);
 	}
 
-	// обработка нажатия кнопки
-	public void onButtonClick(View view) {
-		// добавляем запись
-		db.addRec("sometext " + (cursor.getCount() + 1), R.drawable.ic_launcher);
-		// обновляем курсор
-		cursor.requery();
-	}
-
-	public void onCreateContextMenu(ContextMenu menu, View v,
-	                                ContextMenu.ContextMenuInfo menuInfo) {
-		super.onCreateContextMenu(menu, v, menuInfo);
-		menu.add(0, CM_DELETE_ID, 0, R.string.delete_record);
-	}
-
-	public boolean onContextItemSelected(MenuItem item) {
-		if (item.getItemId() == CM_DELETE_ID) {
-			// получаем из пункта контекстного меню данные по пункту списка
-			AdapterView.AdapterContextMenuInfo acmi = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-			// извлекаем id записи и удаляем соответствующую запись в БД
-			db.delRec(acmi.id);
-			// обновляем курсор
-			cursor.requery();
-			return true;
+	// generate data for adapter
+	private void fillData() {
+		for (int i = 0; i < 21; i++) {
+			products.add(new Product("Product" + i, i * 1000,
+					R.drawable.ic_launcher,false));
 		}
-		return super.onContextItemSelected(item);
 	}
 
-	protected void onDestroy() {
-		super.onDestroy();
-		// закрываем подключение при выходе
-		db.close();
+	public void showResult(View v){
+		String result = "Goods in box:";
+		for (Product p : boxAdapter.getBox()){
+			if (p.box) {
+				result += "\n" + p.name;
+			}
+		}
+		Toast.makeText(this,
+				result,
+				Toast.LENGTH_SHORT).show();
 	}
 }
