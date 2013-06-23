@@ -1,18 +1,22 @@
 package com.example.HelloKittyApp;
 
 import android.app.*;
-import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.*;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /*
-http://startandroid.ru/ru/uroki/vse-uroki-spiskom/117-urok-58-dialogi-timepickerdialog.html
+http://startandroid.ru/ru/uroki/vse-uroki-spiskom/120-urok-61-dialogi-alertdialogmetod-onpreparedialog.html
  */
 
 public class MainActivity extends Activity {
 
-	final int DIALOG_EXIT = 1;
+	final static String LOG_TAG = "myLogs";
+	final int DIALOG = 1;
+	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -20,43 +24,23 @@ public class MainActivity extends Activity {
 	}
 
 	public void onclick(View v){
-		showDialog(DIALOG_EXIT);
+		showDialog(DIALOG);
 	}
 
 	protected Dialog onCreateDialog(int id){
-		if (id == DIALOG_EXIT) {
+		Log.d(LOG_TAG,"onCreateDialog");
+		if (id == DIALOG) {
 			AlertDialog.Builder adb = new AlertDialog.Builder(this);
-			adb.setTitle(R.string.exit);
-			adb.setMessage(R.string.save_data);
-			adb.setIcon(android.R.drawable.ic_dialog_info);
-			adb.setPositiveButton(R.string.yes, myClickListener);
-			adb.setNegativeButton(R.string.no, myClickListener);
-			adb.setNeutralButton(R.string.cancel,myClickListener);
+			adb.setTitle(R.string.title);
+			adb.setMessage(sdf.format(new Date(System.currentTimeMillis())));
 			return adb.create();
 		}
 		return super.onCreateDialog(id);
 	}
 
-	DialogInterface.OnClickListener myClickListener = new DialogInterface.OnClickListener() {
-		@Override
-		public void onClick(DialogInterface dialogInterface, int which) {
-			switch (which){
-				case Dialog.BUTTON_POSITIVE:
-					saveData();
-					finish();
-					break;
-				case Dialog.BUTTON_NEGATIVE:
-					finish();
-					break;
-				case Dialog.BUTTON_NEUTRAL:
-					break;
-			}
-		}
-	};
-
-	void saveData(){
-		Toast.makeText(this,
-				R.string.saved,
-				Toast.LENGTH_SHORT).show();
+	protected void onPrepareDialog(int id, Dialog dialog){
+		super.onPrepareDialog(id, dialog);
+		Log.d(LOG_TAG,"onPrepare");
+		((AlertDialog)dialog).setMessage(sdf.format(new Date(System.currentTimeMillis())));
 	}
 }
