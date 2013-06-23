@@ -1,9 +1,7 @@
 package com.example.HelloKittyApp;
 
-import android.app.Activity;
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
+import android.app.*;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -14,37 +12,51 @@ http://startandroid.ru/ru/uroki/vse-uroki-spiskom/117-urok-58-dialogi-timepicker
 
 public class MainActivity extends Activity {
 
-	int DIALOG_DATE = 1;
-	int myYear = 2011;
-	int myMouth = 02;
-	int myDay = 03;
-	TextView tvDate;
+	final int DIALOG_EXIT = 1;
 
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		tvDate = (TextView) findViewById(R.id.tvDate);
 	}
 
 	public void onclick(View v){
-		showDialog(DIALOG_DATE);
+		showDialog(DIALOG_EXIT);
 	}
 
 	protected Dialog onCreateDialog(int id){
-		if (id == DIALOG_DATE) {
-			DatePickerDialog dpd = new DatePickerDialog(this, myCallBack, myYear, myMouth, myDay);
-			return dpd;
+		if (id == DIALOG_EXIT) {
+			AlertDialog.Builder adb = new AlertDialog.Builder(this);
+			adb.setTitle(R.string.exit);
+			adb.setMessage(R.string.save_data);
+			adb.setIcon(android.R.drawable.ic_dialog_info);
+			adb.setPositiveButton(R.string.yes, myClickListener);
+			adb.setNegativeButton(R.string.no, myClickListener);
+			adb.setNeutralButton(R.string.cancel,myClickListener);
+			return adb.create();
 		}
 		return super.onCreateDialog(id);
 	}
 
-	DatePickerDialog.OnDateSetListener myCallBack = new DatePickerDialog.OnDateSetListener() {
+	DialogInterface.OnClickListener myClickListener = new DialogInterface.OnClickListener() {
 		@Override
-		public void onDateSet(DatePicker datePicker, int i, int i2, int i3) {
-			myYear = i;
-			myMouth = i2;
-			myDay = i3;
-			tvDate.setText("Today is " + myMouth + "/" + myDay + "/" + myYear);
+		public void onClick(DialogInterface dialogInterface, int which) {
+			switch (which){
+				case Dialog.BUTTON_POSITIVE:
+					saveData();
+					finish();
+					break;
+				case Dialog.BUTTON_NEGATIVE:
+					finish();
+					break;
+				case Dialog.BUTTON_NEUTRAL:
+					break;
+			}
 		}
 	};
+
+	void saveData(){
+		Toast.makeText(this,
+				R.string.saved,
+				Toast.LENGTH_SHORT).show();
+	}
 }
