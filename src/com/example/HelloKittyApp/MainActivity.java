@@ -1,37 +1,47 @@
 package com.example.HelloKittyApp;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
 
 /*
-http://startandroid.ru/ru/uroki/vse-uroki-spiskom/114-urok-55-header-i-footer-v-spiskah-headerviewlistadapter.html
+http://startandroid.ru/ru/uroki/vse-uroki-spiskom/117-urok-58-dialogi-timepickerdialog.html
  */
 
 public class MainActivity extends Activity {
 
-	String[] data = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l" , "m", "n", "o", "p", "r", "s", "t", "u", "v", "w", "q", "x", "y", "z"};
-
-	GridView gvMain;
-	ArrayAdapter<String> adapter;
+	int DIALOG_TIME = 1;
+	int myHour = 14;
+	int myMinute = 35;
+	TextView tvTime;
 
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-
-		adapter = new ArrayAdapter<String>(this, R.layout.item,R.id.tvText, data);
-		gvMain = (GridView) findViewById(R.id.gvMain);
-		gvMain.setAdapter(adapter);
-		adjustGridView();
+		tvTime = (TextView) findViewById(R.id.tvTime);
 	}
 
-	private void adjustGridView() {
-		//gvMain.setNumColumns(3);
-		gvMain.setNumColumns(GridView.AUTO_FIT);
-		gvMain.setColumnWidth(80);
-		gvMain.setVerticalSpacing(5);
-		gvMain.setHorizontalSpacing(2);
-		gvMain.setStretchMode(GridView.STRETCH_SPACING_UNIFORM);// using free space
+	public void onclick(View v){
+		showDialog(DIALOG_TIME);
 	}
+
+	protected Dialog onCreateDialog(int id){
+		if (id == DIALOG_TIME) {
+			TimePickerDialog tpd = new TimePickerDialog(this, myCallBack, myHour, myMinute, true);
+			return tpd;
+		}
+		return super.onCreateDialog(id);
+	}
+
+	TimePickerDialog.OnTimeSetListener myCallBack = new TimePickerDialog.OnTimeSetListener() {
+		@Override
+		public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
+			myHour = hourOfDay;
+			myMinute = minute;
+			tvTime.setText("Time is " + myHour + ":" + myMinute);
+		}
+	};
 }
